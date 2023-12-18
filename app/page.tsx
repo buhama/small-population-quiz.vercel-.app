@@ -31,7 +31,7 @@ export default function Home({
 	};
 
 	return (
-		<main className='flex min-h-screen flex-col p-24 w-full text-center items-center gap-2 font-mono'>
+		<main className='flex min-h-screen flex-col md:p-24 p-10 pt-24 w-full text-center items-center gap-2 font-mono'>
 			{page >= 45 && (
 				<div className='mb-8 text-sm'>
 					<p>
@@ -65,7 +65,9 @@ export default function Home({
 			{page < 45 && (
 				<>
 					{' '}
-					<p>If you had to guess what percentage of American adults...</p>
+					<p className='md:m-0 mb-5'>
+						If you had to guess what percentage of American adults...
+					</p>
 					<p className='font-bold text-white bg-gray-600 px-8 p-2 rounded-full'>
 						{selected[0]}?
 					</p>
