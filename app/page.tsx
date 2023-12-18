@@ -144,6 +144,12 @@ export default function Home({
 						</div>
 					)}
 					{/* <p className="text-4xl font-bold">{selected[0]}</p> */}
+					<Link
+						href='/credits'
+						className='text-sm text-blue-500 hover:underline mt-20'
+					>
+						Credits
+					</Link>
 				</>
 			)}
 		</main>
