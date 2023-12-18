@@ -1,5 +1,5 @@
 import { Slider } from '@/components/ui/slider';
-import { TrueValues } from '@/data/data';
+import { RandomTrueValues, TrueValues } from '@/data/data';
 
 import Image from 'next/image';
 import Link from 'next/link';
@@ -13,7 +13,7 @@ export default function Home({
 	searchParams: { page: string; prediction: string };
 }) {
 	const page = Number(searchParams.page || 0);
-	const data = TrueValues;
+	const data = RandomTrueValues;
 	const selected = Object.entries(data)[page];
 	const prediction =
 		Number(searchParams.prediction) || Number(searchParams.prediction) === 0
