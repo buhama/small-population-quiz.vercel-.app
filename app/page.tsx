@@ -1,9 +1,40 @@
 import { Slider } from '@/components/ui/slider';
 import { RandomTrueValues, TrueValues } from '@/data/data';
+import { Metadata } from 'next';
 
 import Image from 'next/image';
 import Link from 'next/link';
 import { redirect } from 'next/navigation';
+
+export const generateMetadata = async (): Promise<Metadata> => {
+	return {
+		title: 'Small Quiz',
+		// description: description,
+		themeColor: '#7E22CE',
+		publisher: 'Hassan Ahme',
+		openGraph: {
+			title: 'Small Quiz',
+			// description: description,
+			images: [
+				{
+					url: '/small_pop_quiz.webp',
+					width: 1200,
+					height: 1200,
+					alt: 'OG image',
+				},
+			],
+			siteName: 'Small Quiz',
+		},
+		twitter: {
+			creator: '@buhama',
+			site: '@buhama',
+			card: 'summary_large_image',
+			title: 'Small Quiz',
+			description: 'test',
+			images: '/small_pop_quiz.webp',
+		},
+	};
+};
 
 export default function Home({
 	params,
