@@ -9,7 +9,8 @@ import { redirect } from 'next/navigation';
 export const generateMetadata = async (): Promise<Metadata> => {
 	return {
 		title: 'Small Quiz',
-		// description: description,
+		description:
+			'Do you know the true values of small subgroups of the US? You might be surprised.',
 		themeColor: '#7E22CE',
 		publisher: 'Hassan Ahme',
 		openGraph: {
