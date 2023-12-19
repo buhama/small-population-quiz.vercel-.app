@@ -156,7 +156,7 @@ export default function Home({
 										}`}
 										style={{ left: `calc(${prediction}% - 8px)` }}
 									>
-										<p className={''}>{prediction}%</p>
+										<p className={'text-blue-500'}>{prediction}%</p>
 									</div>
 									<div
 										className={`items-center absolute h-3 w-3 ${
@@ -170,7 +170,7 @@ export default function Home({
 										}`}
 										style={{ left: `calc(${selected[1][0]}% - 8px)` }}
 									>
-										<p className={''}>{selected[1][0]}%</p>
+										<p className={'text-green-500'}>{selected[1][0]}%</p>
 									</div>
 									<div
 										className={`items-center absolute h-3 w-3 ${
@@ -184,7 +184,7 @@ export default function Home({
 										}`}
 										style={{ left: `calc(${selected[1][1]}% - 8px)` }}
 									>
-										<p className={''}>{selected[1][1]}%</p>
+										<p className={'text-amber-500'}>{selected[1][1]}%</p>
 									</div>
 								</div>
 							</div>
@@ -200,7 +200,7 @@ export default function Home({
 												prediction,
 												selected[1][0],
 												selected[1][1],
-											])}`}
+											])} text-blue-500`}
 										>
 											{prediction}%
 										</p>
@@ -215,7 +215,7 @@ export default function Home({
 												prediction,
 												selected[1][0],
 												selected[1][1],
-											])}`}
+											])} text-green-500`}
 										>
 											{selected[1][0]}%
 										</p>
@@ -230,7 +230,7 @@ export default function Home({
 												prediction,
 												selected[1][0],
 												selected[1][1],
-											])}`}
+											])} text-amber-500`}
 										>
 											{selected[1][1]}%
 										</p>
