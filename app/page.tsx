@@ -30,7 +30,8 @@ export const generateMetadata = async (): Promise<Metadata> => {
 			site: '@buhama',
 			card: 'summary_large_image',
 			title: 'Small Quiz',
-			description: 'test',
+			description:
+				'Do you know the true values of small subgroups of the US? You might be surprised.',
 			images: '/small_pop_quiz.webp',
 		},
 	};
