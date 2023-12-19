@@ -265,18 +265,6 @@ export default function Home({
 					>
 						Credits
 					</Link>
-					<p>-</p>
-					<p className='mt-8 text-sm'>
-						Host parties and events on:{' '}
-						<Link
-							href='https://simpli.events'
-							target='_blank'
-							className='text-blue-500 hover:underline cursor-pointer'
-						>
-							Simpli Events
-						</Link>
-					</p>
-					<p className='mb-8 text-sm'>Free Palestine 🇵🇸</p>
 				</>
 			)}
 		</main>

@@ -35,6 +35,18 @@ const CreditsPage = () => {
 						@buhama_
 					</Link>
 				</p>
+				<p>-</p>
+				<p className='mt-8 text-sm'>
+					Host parties and events on:{' '}
+					<Link
+						href='https://simpli.events'
+						target='_blank'
+						className='text-blue-500 hover:underline cursor-pointer'
+					>
+						Simpli Events
+					</Link>
+				</p>
+				<p className='mb-8 text-sm'>Free Palestine 🇵🇸</p>
 				<Link
 					href={'/?page=0'}
 					className='bg-purple-100 w-fit rounded-lg p-2 font-bold font-mono mt-8'
