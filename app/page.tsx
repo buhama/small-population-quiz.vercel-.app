@@ -17,7 +17,7 @@ export const generateMetadata = async (): Promise<Metadata> => {
 			// description: description,
 			images: [
 				{
-					url: '/small_pop_quiz.png',
+					url: 'https://small-population-quiz-buhama.vercel.app/small_pop_quiz.png',
 					width: 1200,
 					height: 1200,
 					alt: 'OG image',
@@ -32,7 +32,9 @@ export const generateMetadata = async (): Promise<Metadata> => {
 			title: 'Small Quiz',
 			description:
 				'Do you know the true values of small subgroups of the US? You might be surprised.',
-			images: '/small_pop_quiz.png',
+			images: [
+				'https://small-population-quiz-buhama.vercel.app/small_pop_quiz.png',
+			],
 		},
 	};
 };
