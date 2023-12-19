@@ -17,7 +17,7 @@ export const generateMetadata = async (): Promise<Metadata> => {
 			// description: description,
 			images: [
 				{
-					url: '/small_pop_quiz.webp',
+					url: 'https://drive.google.com/file/d/13SRLa-NgoVt1UkUL7f5NbBPagKcudxWS/view?usp=sharing',
 					width: 1200,
 					height: 1200,
 					alt: 'OG image',
@@ -32,7 +32,8 @@ export const generateMetadata = async (): Promise<Metadata> => {
 			title: 'Small Quiz',
 			description:
 				'Do you know the true values of small subgroups of the US? You might be surprised.',
-			images: '/small_pop_quiz.webp',
+			images:
+				'https://drive.google.com/file/d/13SRLa-NgoVt1UkUL7f5NbBPagKcudxWS/view?usp=sharing',
 		},
 	};
 };
