@@ -122,14 +122,20 @@ export default function Home({
 					)}
 					{(!!prediction || prediction === 0) && (
 						<div className='flex flex-col gap-2 w-full items-center justify-center mt-5'>
-							<div className='flex gap-4 mb-8'>
+							<div className='flex gap-2 mb-8'>
 								<div className='flex gap-2 text-sm items-center'>
 									<p>Your Prediction:</p>{' '}
 									<div className='h-3 w-3 bg-blue-500 rounded-full'></div>
+									<p>|</p>
 								</div>
 								<div className='flex gap-2 text-sm items-center'>
 									<p> Actual:</p>
 									<div className='h-3 w-3 bg-green-500 rounded-full'></div>
+									<p>|</p>
+								</div>
+								<div className='flex gap-2 text-sm items-center'>
+									<p> What People Think:</p>
+									<div className='h-3 w-3 bg-amber-500 rounded-full'></div>
 								</div>
 							</div>
 							<div className='relative w-full'>
@@ -141,7 +147,7 @@ export default function Home({
 										<div className=' h-3 w-3 absolute bg-blue-500 rounded-full'></div>
 										<p
 											className={
-												Number(prediction) < Number(selected[1])
+												Number(prediction) < Number(selected[1][0])
 													? '-ml-8'
 													: 'ml-4'
 											}
@@ -151,17 +157,32 @@ export default function Home({
 									</div>
 									<div
 										className='flex items-center absolute h-3 w-3'
-										style={{ left: `calc(${selected[1]}% - 8px)` }}
+										style={{ left: `calc(${selected[1][0]}% - 8px)` }}
 									>
 										<div className='absolute h-3 w-3 bg-green-500 rounded-full'></div>
 										<p
 											className={
-												Number(prediction) > Number(selected[1])
+												Number(prediction) > Number(selected[1][0])
 													? '-ml-8'
 													: 'ml-6'
 											}
 										>
-											{selected[1]}%
+											{selected[1][0]}%
+										</p>
+									</div>
+									<div
+										className='flex items-center absolute h-3 w-3'
+										style={{ left: `calc(${selected[1][1]}% - 8px)` }}
+									>
+										<div className='absolute h-3 w-3 bg-amber-500 rounded-full'></div>
+										<p
+											className={
+												Number(prediction) > Number(selected[1][1])
+													? '-ml-8'
+													: 'ml-6'
+											}
+										>
+											{selected[1][1]}%
 										</p>
 									</div>
 								</div>
