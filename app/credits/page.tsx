@@ -25,6 +25,16 @@ const CreditsPage = () => {
 						@rauchg
 					</Link>
 				</p>
+				<p>
+					Website by
+					<Link
+						href='https://twitter.com/buhama_'
+						target='_blank'
+						className='text-blue-500 hover:underline cursor-pointer'
+					>
+						buhama_
+					</Link>
+				</p>
 				<Link
 					href={'/?page=0'}
 					className='bg-purple-100 w-fit rounded-lg p-2 font-bold font-mono mt-8'

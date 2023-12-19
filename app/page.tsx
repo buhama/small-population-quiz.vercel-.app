@@ -12,7 +12,7 @@ export const generateMetadata = async (): Promise<Metadata> => {
 		description:
 			'Do you know the true values of small subgroups of the US? You might be surprised.',
 		themeColor: '#7E22CE',
-		publisher: 'Hassan Ahme',
+		publisher: 'Hassan Ahmed',
 		openGraph: {
 			title: 'Small Quiz',
 			// description: description,
@@ -27,8 +27,8 @@ export const generateMetadata = async (): Promise<Metadata> => {
 			siteName: 'Small Quiz',
 		},
 		twitter: {
-			creator: '@buhama',
-			site: '@buhama',
+			creator: '@buhama_',
+			site: '@buhama_',
 			card: 'summary_large_image',
 			title: 'Small Quiz',
 			description:
