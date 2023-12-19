@@ -1,5 +1,6 @@
 import { Slider } from '@/components/ui/slider';
 import { RandomTrueValues, TrueValues } from '@/data/data';
+import { numberIsInMiddle } from '@/lib/utils';
 import { Metadata } from 'next';
 
 import Image from 'next/image';
@@ -142,18 +143,72 @@ export default function Home({
 								</div>
 							</div>
 							<div className='relative w-full'>
+								<div className='relative w-full rounded-full h-2 bg-white'>
+									<div
+										className={`items-center absolute h-3 w-3 ${
+											numberIsInMiddle(prediction, [
+												prediction,
+												selected[1][0],
+												selected[1][1],
+											])
+												? 'flex'
+												: 'hidden'
+										}`}
+										style={{ left: `calc(${prediction}% - 8px)` }}
+									>
+										<p className={''}>{prediction}%</p>
+									</div>
+									<div
+										className={`items-center absolute h-3 w-3 ${
+											numberIsInMiddle(selected[1][0], [
+												prediction,
+												selected[1][0],
+												selected[1][1],
+											])
+												? 'flex'
+												: 'hidden'
+										}`}
+										style={{ left: `calc(${selected[1][0]}% - 8px)` }}
+									>
+										<p className={''}>{selected[1][0]}%</p>
+									</div>
+									<div
+										className={`items-center absolute h-3 w-3 ${
+											numberIsInMiddle(selected[1][1], [
+												prediction,
+												selected[1][0],
+												selected[1][1],
+											])
+												? 'flex'
+												: 'hidden'
+										}`}
+										style={{ left: `calc(${selected[1][1]}% - 8px)` }}
+									>
+										<p className={''}>{selected[1][1]}%</p>
+									</div>
+								</div>
+							</div>
+							<div className='relative w-full'>
 								<div className='relative w-full rounded-full h-2 bg-secondary'>
 									<div
-										className='flex items-center absolute h-3 w-3'
+										className={`flex items-center absolute h-3 w-3 `}
 										style={{ left: `calc(${prediction}% - 8px)` }}
 									>
 										<div className=' h-3 w-3 absolute bg-blue-500 rounded-full'></div>
 										<p
-											className={
+											className={`${
 												Number(prediction) < Number(selected[1][0])
 													? '-ml-8'
-													: 'ml-4'
-											}
+													: 'ml-8'
+											} ${
+												numberIsInMiddle(prediction, [
+													prediction,
+													selected[1][0],
+													selected[1][1],
+												])
+													? ' hidden'
+													: ' '
+											}`}
 										>
 											{prediction}%
 										</p>
@@ -164,11 +219,19 @@ export default function Home({
 									>
 										<div className='absolute h-3 w-3 bg-green-500 rounded-full'></div>
 										<p
-											className={
+											className={`${
 												Number(prediction) > Number(selected[1][0])
-													? '-ml-8'
-													: 'ml-6'
-											}
+													? '-ml-6'
+													: 'ml-4'
+											}${
+												numberIsInMiddle(selected[1][0], [
+													prediction,
+													selected[1][0],
+													selected[1][1],
+												])
+													? ' hidden'
+													: ' '
+											}`}
 										>
 											{selected[1][0]}%
 										</p>
@@ -179,11 +242,19 @@ export default function Home({
 									>
 										<div className='absolute h-3 w-3 bg-amber-500 rounded-full'></div>
 										<p
-											className={
+											className={`${
 												Number(prediction) > Number(selected[1][1])
 													? '-ml-8'
 													: 'ml-6'
-											}
+											} ${
+												numberIsInMiddle(selected[1][1], [
+													prediction,
+													selected[1][0],
+													selected[1][1],
+												])
+													? ' hidden'
+													: ''
+											}`}
 										>
 											{selected[1][1]}%
 										</p>
