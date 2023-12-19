@@ -68,6 +68,8 @@ export default function Home({
 
 	return (
 		<main className='flex min-h-screen flex-col md:p-24 p-10 pt-24 w-full text-center items-center gap-2 font-mono'>
+			<p className='-ml-8 hidden'>Ghost div</p>
+			<p className='ml-4 hidden'>Ghost div</p>
 			{page >= 45 && (
 				<div className='mb-8 text-sm'>
 					<p>
