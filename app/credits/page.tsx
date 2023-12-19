@@ -15,7 +15,7 @@ const CreditsPage = () => {
 						YouGov
 					</Link>
 				</p>
-				<p className='mb-8 text-sm'>
+				<p className='text-sm'>
 					Idea From:{' '}
 					<Link
 						href='https://twitter.com/rauchg/status/1736810488674365856'
@@ -25,14 +25,14 @@ const CreditsPage = () => {
 						@rauchg
 					</Link>
 				</p>
-				<p>
-					Website by
+				<p className='mb-8 text-sm'>
+					Website by:{' '}
 					<Link
 						href='https://twitter.com/buhama_'
 						target='_blank'
 						className='text-blue-500 hover:underline cursor-pointer'
 					>
-						buhama_
+						@buhama_
 					</Link>
 				</p>
 				<Link
